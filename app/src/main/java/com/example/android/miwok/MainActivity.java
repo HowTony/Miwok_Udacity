@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
         });
         TextView colors = (TextView) findViewById(R.id.colors);
         colors.setOnClickListener(new OnClickListener() {
-            // The code in this method will be executed when the colors category is clicked on.
             @Override
             public void onClick(View view) {
                 Intent colorsIntent = new Intent(MainActivity.this, ColorsActivity.class);
@@ -52,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
         });
         TextView phrases = (TextView) findViewById(R.id.phrases);
         phrases.setOnClickListener(new OnClickListener() {
-            // The code in this method will be executed when the phrases category is clicked on.
             @Override
             public void onClick(View view) {
                 Intent phrasesIntent = new Intent(MainActivity.this, PhrasesActivity.class);

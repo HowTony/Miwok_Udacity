@@ -1,7 +1,6 @@
 package com.example.android.miwok;
 
 import android.content.Context;
-import android.media.MediaPlayer;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,8 +10,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import java.util.ArrayList;
 
-
-
 /**
  * Created by Tony Howarth on 1/27/2017.
  */
@@ -20,13 +17,10 @@ import java.util.ArrayList;
 public class WordAdapter extends ArrayAdapter {
 
     private int mBackground;
-    private MediaPlayer mMediaPlayer;
-
 
     public WordAdapter(Context context, ArrayList<Word>resource, int color) {
         super(context, 0, resource);
         mBackground = color;
-
     }
 
     @Override
@@ -36,7 +30,6 @@ public class WordAdapter extends ArrayAdapter {
         if(listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(R.layout.list_item, parent, false);
         }
-
         // Get the object located at this position in the list
         Word currentWordObject = (Word) getItem(position);
         // Find the TextView in the list_item.xml layout with the ID version_name
@@ -60,10 +53,8 @@ public class WordAdapter extends ArrayAdapter {
         // Get the image resource ID from the current AndroidFlavor object and
         // set the image to iconView
         iconView.setImageResource(currentWordObject.getImageResourceId());
-
         //Set theme color for list item
         View textContainer = listItemView.findViewById(R.id.linear_layout_vertical);
-
         //find the color id we passed in
         int color = ContextCompat.getColor(getContext(), mBackground);
         //set the background color for the textViews

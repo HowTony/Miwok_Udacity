@@ -20,7 +20,6 @@ public class PhrasesActivity extends AppCompatActivity {
 
     AudioManager.OnAudioFocusChangeListener mAudioFocusChangeListener =
             new AudioManager.OnAudioFocusChangeListener() {
-
                 public void onAudioFocusChange(int focusChange) {
                     if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT ||
                             focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK) {
